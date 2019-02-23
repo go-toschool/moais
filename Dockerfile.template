@@ -4,7 +4,7 @@ WORKDIR /go/src/github.com/balena-io-projects/app
 
 COPY /app ./
 
-RUN go build
+RUN go get -d -v gobot.io/x/gobot
 
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:stretch
 
